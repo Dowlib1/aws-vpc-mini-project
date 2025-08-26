@@ -56,10 +56,10 @@ This mini-project provides hands-on experience deploying and configuring AWS VPC
 
 - Select subnets and choose "Create".
 
-![Create Subnet](images/vcpsub.png)
+![Create Subnet](images/vpcsub.png)
 - Configure the subnet parameters.
 
-![Subnet Configuration](images/vpcjoin.png)
+![Subnet Configuration](images/vpsjoin.png)
 ![Additional Subnet Options](images/vpcd.png)
 
 ---
@@ -72,7 +72,7 @@ This mini-project provides hands-on experience deploying and configuring AWS VPC
 ![Internet Gateway Details](images/vpcig.png)
 - Choose "Create" or "Attach" as needed.
 
-![Choose Action](images/vpci.png)
+![Choose Action](images/vpcyi.png)
 - Attach the Internet Gateway to your VPC.
 
 ![Attach IGW](images/vpcat.png)
@@ -94,7 +94,7 @@ This mini-project provides hands-on experience deploying and configuring AWS VPC
 ![Associate Subnet](images/vpccp.png)
 ![Subnet Association](images/vpcal.png)
 ![Route Table Association](images/vpch.png)
-![Route Table Edit](images/vpcj.png)
+![Route Table Edit](images/vpcja.png)
 ![Final Route Table](images/vpcf.png)
 ![Route Table Confirmation](images/vpcfd.png)
 ![Route Table Review](images/vpcja.png)
@@ -139,7 +139,7 @@ This mini-project provides hands-on experience deploying and configuring AWS VPC
 ![Accepter VPC Route Table](images/vpcwe.png)
 - Edit routes and add the CIDR of the requester VPC.
 
-![Edit Route](images/vpfeg.png)
+![Edit Route](images/vpcfeg.png)
 ![Add Route](images/vpc300.png)
 ![Save Route](images/vpcsav.png)
 ![Route Table Verification](images/vpcv.png)
@@ -151,7 +151,7 @@ This mini-project provides hands-on experience deploying and configuring AWS VPC
 - Select VPC peering as the target, then choose the peering connection.
 
 ![Select Peering](images/vpcci.png)
-![Peering Confirmation](images/vpcpp.png)
+![Peering Confirmation](images/vcppp.png)
 
 - Do the same for the requester VPC.
 
