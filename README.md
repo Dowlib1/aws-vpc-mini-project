@@ -1,161 +1,187 @@
-# aws-vpc-mini-project
-hands-on project on vpc
-##search for 'VPC' on the aws conle search bar
-![iam](images/vpc.png)
+# AWS VPC Mini Project
 
-![iam](images/vpc1.png)
-##create vpc
-![iam](images/vpc2.png)
-##
-![iam](images/vpcc.png)
-## Select subnets and choose create
-![iam](images/vcpsub.png)
-##Configure the subnet like this
-![iam](images/vpcjoin.png)
+## Project Reflection
 
-![iam](images/vpcd.png)
-###Locate and select internet gateway
-![iam](images/vpcigw.png)
+- Successfully completed the project tasks related to setting up VPC infrastructure and configuring network components.
+- Gained practical experience in navigating AWS management console and configuring VPC resources.
+- Encountered challenges such as CIDR block size limitations and learned how to troubleshoot and resolve them effectively.
+- Developed a deeper understanding of network architecture and cloud networking concepts through hands-on experimentation.
+- Recognized the importance of network security measures, such as NAT gateways and VPC endpoints, in ensuring secure communication within cloud environments.
+- Overall, the project offered valuable perspectives on the fundamentals of cloud networking and practical experience in deploying VPC infrastructure on AWS.
 
-![iam](images/vpcig.png)
-## Choose action
-![iam](images/vpci.png)
-###Attach igw to vpc
-![iam](images/vpcat.png)
-##confirm attach
-![iam](images/vpcatt.png)
-Repeat for the secong subnet
-![iam](images/vpcim.png)
-##Create aroute table
+---
 
-![iam](images/vpcrt.png)
-##
-![iam](images/vpcttr.png)
-##Edit associate subnet
-![iam](images/vpccp.png)
+## Table of Contents
 
-![iam](images/vpcal.png)
+1. [Introduction](#introduction)
+2. [Step-by-Step Guide](#step-by-step-guide)
+    - [Search for VPC](#search-for-vpc)
+    - [Create VPC](#create-vpc)
+    - [Configure Subnets](#configure-subnets)
+    - [Set up Internet Gateway](#set-up-internet-gateway)
+    - [Create Route Tables](#create-route-tables)
+    - [VPC Peering](#vpc-peering)
+3. [Best Practices](#best-practices)
+4. [Conclusion](#conclusion)
 
-![iam](images/vpch.png)
+---
 
-![iam](images/vpcj.png)
+## Introduction
 
-![iam](images/vpcf.png)
+This mini-project provides hands-on experience deploying and configuring AWS VPCs, subnets, gateways, route tables, and peering connections. It aims to help you understand cloud networking fundamentals and security best practices.
 
-![iam](images/vpcfd.png)
+---
 
-![iam](images/vpcja.png)
+## Step-by-Step Guide
 
-![iam](images/vpcse.png)
+### Search for VPC
 
-![iam](images/vpcwq.png)
+- In the AWS Console, search for "VPC" in the search bar.
 
-![iam](images/vpcty.png)
+![Search for VPC](images/vpc.png)
+![VPC Dashboard](images/vpc1.png)
 
-![iam](images/vpcop.png)
+---
 
-![iam](images/vpcobo.png)
+### Create VPC
 
-![iam](images/vpcyu.png)
+- Click "Create VPC".
 
-![iam](images/vpccz.png)
+![Create VPC](images/vpc2.png)
+![VPC Configuration](images/vpcc.png)
 
-![iam](images/vpcgo.png)
+---
 
-![iam](images/vpcfh.png)
+### Configure Subnets
 
-![iam](images/vpc22.png)
+- Select subnets and choose "Create".
 
-![iam](images/vpcxc.png)
-##Step -6 Creating two VPC in two region.
-![iam](images/vpcinit.png)
+![Create Subnet](images/vcpsub.png)
+- Configure the subnet parameters.
 
-![iam](images/vpcout.png)
+![Subnet Configuration](images/vpcjoin.png)
+![Additional Subnet Options](images/vpcd.png)
 
-![iam](images/vpc1u.png)
-3. Now, provide a name for the VPC peering connection.
+---
 
-a) select the requester VPC.
+### Set up Internet Gateway
 
-b) Choose the account "My account" since the VPCs are in our own AWS account.
+- Locate and select "Internet Gateway".
 
-c) Ensure to use the same region, "This Region (ap-southeast-1)," as the VPCs were created in the same region.
+![Internet Gateway](images/vpcigw.png)
+![Internet Gateway Details](images/vpcig.png)
+- Choose "Create" or "Attach" as needed.
 
-d) Next, select the accepter VPC.
+![Choose Action](images/vpci.png)
+- Attach the Internet Gateway to your VPC.
 
-e) proceed by clicking on the "Create Peering Connection" button.
-![iam](images/vpcwq.png)
+![Attach IGW](images/vpcat.png)
+![Confirm Attach](images/vpcatt.png)
+- Repeat for the second subnet.
 
+![Second Subnet](images/vpcim.png)
 
-![iam](images/vpcacc.png)
+---
 
-![iam](images/vpcmj.png)
+### Create Route Tables
 
-![iam](images/vpcrou.png)
-b) Click on Accept request.
-![iam](images/vpcfree.png)
-5. Now, click on Main route table ID of the accepter VPC.
-![iam](images/vpcwe.png)
-6. Choose the route table.
-a) then navigate to the "Routes" section.
-b) Click on "Edit route."
-![iam](images/vpfeg.png)
-c) Click on add route.
-![iam](images/vpc300.png)
+- Create a route table.
 
-![iam](images/vpcsav.png)
+![Create Route Table](images/vpcrt.png)
+![Route Table Details](images/vpcttr.png)
+- Edit and associate your subnet with the route table.
 
-![iam](images/vpcv.png)
-7. Go to the VPC page
+![Associate Subnet](images/vpccp.png)
+![Subnet Association](images/vpcal.png)
+![Route Table Association](images/vpch.png)
+![Route Table Edit](images/vpcj.png)
+![Final Route Table](images/vpcf.png)
+![Route Table Confirmation](images/vpcfd.png)
+![Route Table Review](images/vpcja.png)
 
-a) select the requester VPC.
+---
 
-b) In the details tab, you'll find the IPv4 CIDR. (in this case - 192.168.0.0/16)
+### VPC Peering
 
-c) Copy this CIDR and paste it in the "Destination" field when adding a route.
+**Steps to Create Peering Connection between Two VPCs:**
 
+1. Deploy two VPCs (can be in different regions).
 
+![Create Two VPCs](images/vpc22.png)
+![VPC Regions](images/vpcxc.png)
+![VPC Initialization](images/vpcinit.png)
+![VPC Output](images/vpcout.png)
 
+2. Create VPC Peering Connection.
 
-![iam](images/vpck.png)
+![VPC Peering](images/vpc1u.png)
 
-![iam](images/vpcope.png)
-d) In the target, choose VPC peering and then choose the peering connection you have created. Click on save
-changes
-![iam](images/vpcci.png)
+- Provide a name for the peering connection.
+- Select the requester VPC.
+- Choose "My account" for the account.
+- Ensure both VPCs are in the same region.
+- Select the accepter VPC.
+- Click "Create Peering Connection".
 
-![iam](images/vpcpp.png)
-9. Now, click on Main route table ID of the requester VPC.
-![iam](images/vpclo.png)
+![Peering Connection](images/vpcwq.png)
+![Peering Acceptance](images/vpcacc.png)
+![Peering Management](images/vpcmj.png)
 
-![iam](images/vpcyi.png)
+3. Accept the peering request.
 
-![iam](images/vpc.png)
-9. Now, click on Main route table ID of the requester VPC.
-![iam](images/vpc1.png)
-10. Choose the route table, then navigate to the "Routes" section. Click on "Edit route."
-![iam](images/vpc2.png)
+![Accept Peering Request](images/vpcrou.png)
+![Peering Free](images/vpcfree.png)
 
-![iam](images/vpc.png)
- Click on add route.
+4. Edit route tables to enable communication between VPCs.
 
-a) Paste the CIDR in the "Destination" field.
+- Go to the main route table ID of the accepter VPC.
 
-b) In the target, choose VPC peering
+![Accepter VPC Route Table](images/vpcwe.png)
+- Edit routes and add the CIDR of the requester VPC.
 
-c) Then choose the peering connection you have created.
+![Edit Route](images/vpfeg.png)
+![Add Route](images/vpc300.png)
+![Save Route](images/vpcsav.png)
+![Route Table Verification](images/vpcv.png)
 
-Alt text
+- Copy IPv4 CIDR from the requester VPC details.
 
-The connection has been successfully established. Now, resources in the accepter VPC can connect to resources
-in the requester VPC, and vice versa.
-![iam](images/vpc1.png)
+![Copy CIDR](images/vpck.png)
+![Paste CIDR](images/vpcope.png)
+- Select VPC peering as the target, then choose the peering connection.
 
-![iam](images/vpc2.png)
+![Select Peering](images/vpcci.png)
+![Peering Confirmation](images/vpcpp.png)
 
+- Do the same for the requester VPC.
 
+![Requester Route Table](images/vpclo.png)
+![Requester Route Table Verification](images/vpcyi.png)
 
+- Add routes as before.
 
+![Requester Route Table](images/vpc1.png)
+![Requester Route Table](images/vpc2.png)
 
+- The connection has been successfully established. Now, resources in both VPCs can communicate.
 
+![Success Confirmation](images/vpc1.png)
+![Peering Success](images/vpc2.png)
 
+---
+
+## Best Practices
+
+- Always plan your CIDR blocks to avoid overlaps and maximize address space.
+- Use NAT gateways and VPC endpoints for secure access to AWS services.
+- Regularly review your route tables for unintended routes.
+- Follow AWS security best practices for subnet isolation and public/private resource configuration.
+
+---
+
+## Conclusion
+
+This project enabled hands-on learning of AWS VPCs, including their configuration, networking, security, and peering.  
+You now have practical knowledge of deploying and managing cloud networks, troubleshooting, and applying security measures in AWS.
+
+---
